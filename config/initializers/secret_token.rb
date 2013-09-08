@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-MalvadosFeed::Application.config.secret_key_base = 'fb4f7dc1f34dc12c0be887cf5adc089937e8c1a00fb2899fd5522a4d8073f7811d80742cec11375c5a1a5a4f0386c30308be65e077258fd08e6f73f6b95c3430'
+MalvadosFeed::Application.config.secret_key_base = ENV['secret_key_base'] || '414cbbc9e2f1b82246a1e1ab99b359be3768efc1fb6955a9eab99338a350a4a9b1d4d69f1829cbc377441d7422f9bc31814c5d6d1b9d9ad30a8889912d170102'
