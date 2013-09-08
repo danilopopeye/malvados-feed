@@ -20,4 +20,16 @@ group :development do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'meta_request'
+  gem 'guard-rails_best_practices'
+  gem 'guard-bundler'
+  gem 'guard-rspec'
+  gem 'guard-zeus'
+  gem 'guard-pow'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'mongoid-rspec'
+  gem 'webmock'
 end
