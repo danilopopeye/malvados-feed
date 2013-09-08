@@ -1,0 +1,11 @@
+title: Malvados Feed
+description: Quadrinhos de humor de Andre Dahmer - Tirinhas dos Malvados
+base_url: http://www.malvados.com.br/
+author: Andre Dahmer
+developer: Danilo Sousa
+development:
+  self: http://malvados.dev/
+test:
+  self: http://www.example.com/
+production:
+  self: https://malvados.danilosousa.net/
