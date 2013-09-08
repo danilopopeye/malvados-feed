@@ -7,6 +7,9 @@ gem 'rails', '4.0.0'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
+# application
+gem 'nokogiri', require: false
+
 group :test, :development do
   gem 'pry'
   gem 'debugger'

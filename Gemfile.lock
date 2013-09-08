@@ -110,6 +110,7 @@ GEM
       railties
     method_source (0.8.2)
     mime-types (1.24)
+    mini_portile (0.5.1)
     minitest (4.7.5)
     mongoid-rspec (1.9.0)
       mongoid (>= 3.0.1)
@@ -117,6 +118,8 @@ GEM
       rspec (>= 2.14)
     moped (1.5.1)
     multi_json (1.7.9)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     origin (1.1.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -219,6 +222,7 @@ DEPENDENCIES
   meta_request
   mongoid!
   mongoid-rspec
+  nokogiri
   pry
   rails (= 4.0.0)
   rails_best_practices
