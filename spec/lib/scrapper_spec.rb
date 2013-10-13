@@ -8,7 +8,7 @@ describe Scrapper do
 
   describe :exists? do
     it 'should return true when exists a strip with this number' do
-      create :strip
+      create :strip, number: 1
       subject.exists?(1).should be_true
     end
 
