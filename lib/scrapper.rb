@@ -3,6 +3,8 @@ require 'nokogiri'
 require 'yaml'
 
 class Scrapper
+  attr_reader :settings
+
   def initialize
     @settings = YAML.load_file Rails.root.join 'config/application.yml'
     @settings.merge! @settings.fetch(Rails.env, {})
