@@ -9,4 +9,8 @@ class Strip
 
   validates_presence_of :number, :image, :previous
   validates_uniqueness_of :number, :previous
+
+  def self.latest
+    find_by number: max(:number)
+  end
 end
