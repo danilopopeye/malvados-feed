@@ -39,6 +39,8 @@ GEM
     arel (4.0.0)
     atomic (1.1.13)
     awesome_print (1.1.0)
+    be_valid_asset (1.2.3)
+      rspec
     better_errors (0.9.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -208,9 +210,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  be_valid_asset
   better_errors
   binding_of_caller
   bson_ext
+  builder
   database_cleaner
   debugger
   factory_girl_rails

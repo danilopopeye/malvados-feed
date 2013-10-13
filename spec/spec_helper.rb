@@ -44,6 +44,7 @@ RSpec.configure do |config|
   config.include WebMock::API
   config.include Mongoid::Matchers
   config.include FactoryGirl::Syntax::Methods
+  config.include BeValidAsset
 
   # mongoid database_cleaner config
   config.before(:suite) do
@@ -52,7 +53,7 @@ RSpec.configure do |config|
 
   config.before(:each) do
     DatabaseCleaner[:mongoid].start
-    WebMock.disable_net_connect!(allow_localhost: true)
+    WebMock.disable_net_connect!(allow_localhost: true, allow: 'validator.w3.org')
   end
 
   config.after(:each) do

@@ -9,6 +9,7 @@ gem 'bson_ext'
 
 # application
 gem 'nokogiri', require: false
+gem 'builder'
 
 group :test, :development do
   gem 'pry'
@@ -33,6 +34,7 @@ end
 group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
+  gem 'be_valid_asset'
   gem 'mongoid-rspec'
   gem 'webmock'
 end
