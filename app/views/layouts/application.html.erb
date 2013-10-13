@@ -1,14 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <title>MalvadosFeed</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <h1>Malvados Feed</h1>
+    <p>Yet Another Malvados Feed</p>
+  </header>
 
-<%= yield %>
+  <div id="banner">
+    <div class="banner-inner">
+      <span id="logo"></span>
 
+      <a href="https://github.com/danilopopeye/malvados-feed" class="button fork"><strong>Fork On GitHub</strong></a>
+
+      <div class="downloads">
+        <span>Feed:</span>
+
+        <ul>
+          <li><a href="#latest" class="button">Latest</a></li>
+          <li><a href="#all" class="button">All</a></li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- end banner -->
+
+  <div class="wrapper">
+    <nav>
+      <ul></ul>
+    </nav>
+
+    <section>
+      <%= yield %>
+    </section>
+
+    <footer>
+      <p>Project maintained by <a href="https://github.com/danilopopeye">danilopopeye</a></p>
+      <p><span class="small">Hosted on Heroku &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span></p>
+    </footer>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <%= javascript_include_tag 'application' %>
+  <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 </body>
 </html>
