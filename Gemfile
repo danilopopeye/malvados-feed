@@ -8,6 +8,7 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
 # application
+gem 'newrelic_rpm'
 gem 'nokogiri', require: false
 gem 'builder'
 
