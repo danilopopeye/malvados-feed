@@ -11,6 +11,8 @@ gem 'bson_ext'
 gem 'newrelic_rpm'
 gem 'nokogiri', require: false
 gem 'builder'
+gem 'uglifier'
+gem 'sass-rails'
 
 group :production do
   gem 'rails_12factor'

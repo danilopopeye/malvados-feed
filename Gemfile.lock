@@ -68,6 +68,7 @@ GEM
     debugger-ruby_core_source (1.2.3)
     diff-lcs (1.2.4)
     erubis (2.7.0)
+    execjs (2.0.2)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.2.1)
@@ -185,6 +186,11 @@ GEM
       rspec-mocks (~> 2.14.0)
     ruby-progressbar (1.2.0)
     safe_yaml (0.9.5)
+    sass (3.2.12)
+    sass-rails (4.0.1)
+      railties (>= 4.0.0, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0)
     sexp_processor (4.3.0)
     shoulda-matchers (2.3.0)
       activesupport (>= 3.0.0)
@@ -206,6 +212,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
+    uglifier (2.2.1)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
     webmock (1.13.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
@@ -239,5 +248,7 @@ DEPENDENCIES
   rails_12factor
   rails_best_practices
   rspec-rails
+  sass-rails
   shoulda-matchers
+  uglifier
   webmock
