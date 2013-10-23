@@ -12,11 +12,16 @@ class Scrapper
   end
 
   def scrap number
-    logger "scrap #{number}"
+    print "Started #{number}: "
 
-    unless exists? number
-      get_and_parse number
-      logger "scraped #{number}"
+    if exists? number
+      print "SKIPPED\n"
+    else
+      if get_and_parse(number)
+        puts "DONE"
+      else
+        puts "FAIL"
+      end
     end
   end
 
@@ -91,11 +96,5 @@ class Scrapper
     end
 
     strip.save
-  end
-
-  private
-
-  def logger *args
-    puts args.inspect
   end
 end
