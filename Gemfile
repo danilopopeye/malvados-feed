@@ -9,13 +9,13 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
 # application
-gem 'newrelic_rpm'
 gem 'nokogiri', require: false
 gem 'builder'
 gem 'uglifier'
 gem 'sass-rails'
 
 group :production do
+  gem 'newrelic_rpm'
   gem 'rails_12factor'
   gem 'memcachier'
   gem 'dalli'
