@@ -1,0 +1,8 @@
+language: ruby
+bundler_args: --without development
+services: mongodb
+cache: bundler
+env:
+  - secret_key_base=travis
+rvm:
+  - 2.0.0
