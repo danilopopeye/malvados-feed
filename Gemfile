@@ -17,6 +17,8 @@ gem 'sass-rails'
 
 group :production do
   gem 'rails_12factor'
+  gem 'memcachier'
+  gem 'dalli'
 end
 
 group :test, :development do

@@ -58,6 +58,7 @@ GEM
     columnize (0.3.6)
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
+    dalli (2.6.4)
     database_cleaner (1.1.1)
     debug_inspector (0.0.2)
     debugger (1.6.1)
@@ -107,6 +108,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     meta_request (0.2.8)
       callsite
       rack-contrib
@@ -230,6 +232,7 @@ DEPENDENCIES
   binding_of_caller
   bson_ext
   builder
+  dalli
   database_cleaner
   debugger
   factory_girl_rails
@@ -238,6 +241,7 @@ DEPENDENCIES
   guard-rails_best_practices
   guard-rspec
   guard-zeus
+  memcachier
   meta_request
   mongoid!
   mongoid-rspec
