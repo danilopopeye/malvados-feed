@@ -6,7 +6,7 @@ class StripsController < ApplicationController
     @strips = if params[:latest]
       [ @latest ]
     else
-      Strip.all
+      Strip.order_by(:number => :desc)
     end
   end
 end
