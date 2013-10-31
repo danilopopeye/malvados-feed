@@ -1,14 +1,12 @@
-cache [@latest.number, params[:latest]]  do
+cache [@latest, params[:latest]]  do
   atom_feed do |feed|
-    cache 'header' do
-      feed.link :href => @settings[:base_url], rel: 'alternate'
-      feed.title @settings[:title]
-      feed.subtitle @settings[:description]
-      feed.author { |f| f.name @settings[:author] }
-      feed.updated @latest.updated_at
-      feed.icon "http://www.malvados.com.br/favicon.ico"
-      feed.generator @settings[:developer], uri: @settings[:project]
-    end
+    feed.link :href => @settings[:base_url], rel: 'alternate'
+    feed.title @settings[:title]
+    feed.subtitle @settings[:description]
+    feed.author { |f| f.name @settings[:author] }
+    feed.updated @latest.updated_at
+    feed.icon "http://www.malvados.com.br/favicon.ico"
+    feed.generator @settings[:developer], uri: @settings[:project]
 
     @strips.each do |strip|
       feed.entry strip, url: strip.url do |entry|
