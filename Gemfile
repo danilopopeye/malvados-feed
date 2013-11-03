@@ -13,6 +13,7 @@ gem 'nokogiri', require: false
 gem 'builder'
 gem 'uglifier'
 gem 'sass-rails'
+gem 'passenger', require: false
 
 group :production do
   gem 'newrelic_rpm'
