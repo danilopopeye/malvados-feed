@@ -43,6 +43,7 @@ group :development do
 end
 
 group :test do
+  gem 'coveralls', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'be_valid_asset'

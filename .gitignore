@@ -13,3 +13,4 @@ spec/reports
 # Personal
 .env
 .powenv
+coverage
