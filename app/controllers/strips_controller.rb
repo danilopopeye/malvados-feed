@@ -1,6 +1,6 @@
 class StripsController < ApplicationController
   def show
-    @settings = Scrapper.new.settings
+    @settings = StripBuilder.new.settings
     @latest = Strip.latest
     @isLatest = params[:latest]
     @strips = if params[:latest]
