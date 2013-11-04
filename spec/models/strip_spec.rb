@@ -16,4 +16,15 @@ describe Strip do
   [ :number, :previous ].each do |field|
     it { should validate_uniqueness_of field }
   end
+
+  describe 'self.latest' do
+    before do
+      create :strip, number: 1
+      create :strip, number: 666
+    end
+
+    it 'should return the Strip with the highest number' do
+      Strip.latest[:number].should eq 666
+    end
+  end
 end
