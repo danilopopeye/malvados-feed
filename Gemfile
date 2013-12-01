@@ -24,7 +24,6 @@ end
 
 group :test, :development do
   gem 'pry'
-  gem 'debugger'
   gem 'rspec-rails'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
@@ -40,6 +39,7 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-zeus'
   gem 'guard-pow'
+  gem 'debugger'
 end
 
 group :test do
