@@ -10,8 +10,6 @@ notification :tmux,
 
 rspec_options = {
   cmd: 'zeus rspec',
-  keep_failed: true,
-  focus_on_failed: true,
   all_after_pass: true
 }
 
@@ -32,7 +30,6 @@ end
 guard 'pow' do
   watch('.powrc')
   watch('.powenv')
-  watch('.rvmrc')
   watch('Gemfile')
   watch('Gemfile.lock')
   watch('config/application.rb')
@@ -43,4 +40,5 @@ end
 
 guard 'rails_best_practices' do
   watch(%r{^app/(.+)\.rb$})
+  watch(%r{^lib/(.+)\.rb$})
 end
