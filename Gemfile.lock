@@ -145,6 +145,9 @@ GEM
       connection_pool (~> 1.2)
       optionable (~> 0.2.0)
     multi_json (1.8.4)
+    newrelic_moped (0.0.8)
+      moped
+      newrelic_rpm (~> 3.7.0)
     newrelic_rpm (3.7.2.195)
     nio4r (1.0.0)
     nokogiri (1.6.1)
@@ -311,6 +314,7 @@ DEPENDENCIES
   meta_request
   mongoid!
   mongoid-rspec
+  newrelic_moped
   newrelic_rpm
   nokogiri
   passenger

@@ -15,8 +15,11 @@ gem 'builder'
 gem 'uglifier'
 gem 'sass-rails'
 
+# newrelic
+gem 'newrelic_moped'
+gem 'newrelic_rpm'
+
 group :production do
-  gem 'newrelic_rpm'
   gem 'rails_12factor'
   gem 'memcachier'
   gem 'dalli'
