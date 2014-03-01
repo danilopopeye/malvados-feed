@@ -9,11 +9,11 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
 # application
+gem 'passenger', require: false
 gem 'nokogiri', require: false
 gem 'builder'
 gem 'uglifier'
 gem 'sass-rails'
-gem 'passenger', require: false
 
 group :production do
   gem 'newrelic_rpm'
@@ -23,9 +23,10 @@ group :production do
 end
 
 group :test, :development do
-  gem 'pry'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'pry-remote'
+  gem 'pry-plus'
 end
 
 group :development do
