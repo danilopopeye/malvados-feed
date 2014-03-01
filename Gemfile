@@ -25,7 +25,6 @@ end
 group :test, :development do
   gem 'pry'
   gem 'rspec-rails'
-  gem 'database_cleaner'
   gem 'factory_girl_rails'
 end
 
