@@ -1,6 +1,6 @@
 ## (unofficial) Malvados Feed
 
-[![Valid Atom 1.0](http://validator.w3.org/feed/images/valid-atom.png)](http://validator.w3.org/feed/check.cgi?url=http%3A//malvados.danilosousa.net/strips)
+[![Valid Atom 1.0](http://img.shields.io/badge/feed-valid-brightgreen.svg)](http://validator.w3.org/feed/check.cgi?url=http%3A//malvados.danilosousa.net/strips)
 [![Code Climate](https://codeclimate.com/github/danilopopeye/malvados-feed.png)](https://codeclimate.com/github/danilopopeye/malvados-feed)
 [![Build Status](https://travis-ci.org/danilopopeye/malvados-feed.png)](https://travis-ci.org/danilopopeye/malvados-feed)
 [![Dependency Status](https://gemnasium.com/danilopopeye/malvados-feed.png)](https://gemnasium.com/danilopopeye/malvados-feed)
