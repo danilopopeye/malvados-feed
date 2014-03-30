@@ -51,6 +51,7 @@ group :test do
 end
 
 group :other do
+  gem 'codeclimate-test-reporter', require: false
   gem 'coveralls', require: false
   gem 'passenger', require: false
   gem 'nokogiri', require: false

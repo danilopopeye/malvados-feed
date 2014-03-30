@@ -58,6 +58,8 @@ GEM
       nio4r (>= 0.5.0)
     code_analyzer (0.4.4)
       sexp_processor
+    codeclimate-test-reporter (0.3.0)
+      simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     colored (1.2)
     columnize (0.3.6)
@@ -300,6 +302,7 @@ DEPENDENCIES
   binding_of_caller
   bson_ext
   builder
+  codeclimate-test-reporter
   coveralls
   dalli
   database_cleaner
