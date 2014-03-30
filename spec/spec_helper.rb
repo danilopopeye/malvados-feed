@@ -4,11 +4,15 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'webmock/rspec'
 require 'coveralls'
+require 'codeclimate-test-reporter'
 
 Coveralls.wear!
 
-require 'codeclimate-test-reporter'
-CodeClimate::TestReporter.start
+formatters = []
+formatters << Coveralls::SimpleCov::Formatter
+formatters << CodeClimate::TestReporter::Formatter if ENV['CODECLIMATE_REPO_TOKEN']
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[*formatters]
+SimpleCov.start 'rails'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
