@@ -9,8 +9,6 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
 # application
-gem 'passenger', require: false
-gem 'nokogiri', require: false
 gem 'builder'
 gem 'uglifier'
 gem 'sass-rails'
@@ -42,14 +40,18 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-zeus'
   gem 'guard-pow'
-  gem 'debugger'
 end
 
 group :test do
-  gem 'coveralls', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'be_valid_asset'
   gem 'mongoid-rspec'
   gem 'webmock'
+end
+
+group :other do
+  gem 'coveralls', require: false
+  gem 'passenger', require: false
+  gem 'nokogiri', require: false
 end
