@@ -3,4 +3,4 @@ bundler_args: --without development
 services: mongodb
 cache: bundler
 rvm:
-  - 2.0.0
+  - 2.1.1
