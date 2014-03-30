@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 describe Scrapper do
-  subject { described_class.new }
-
   before do
     StripBuilder.any_instance.stub({
       latest: 666, previous: 0
@@ -29,8 +27,9 @@ describe Scrapper do
 
     it 'should parse each strip only once' do
       create :strip, number: 666
-      subject.all
       Strip.any_instance.should_not_receive :save
+      subject.all
     end
   end
+
 end
