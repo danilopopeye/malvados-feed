@@ -3,13 +3,13 @@ guard :bundler do
 end
 
 notification :tmux,
-  :display_message => true,
-  :timeout => 2, # in seconds
-  :default_message_format => '%s >> %s',
-  :line_separator => ' > '
+  display_message: true,
+  timeout: 2, # in seconds
+  default_message_format: '%s >> %s',
+  line_separator: ' > '
 
 rspec_options = {
-  cmd: 'zeus rspec',
+  cmd: 'spring rspec',
   all_after_pass: true
 }
 

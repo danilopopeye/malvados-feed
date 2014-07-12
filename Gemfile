@@ -24,10 +24,12 @@ group :production do
 end
 
 group :test, :development do
+  gem 'spring-commands-rspec'
   gem 'rspec-rails', '~> 2.14'
   gem 'factory_girl_rails'
   gem 'pry-remote'
   gem 'pry-plus'
+  gem 'listen'
 end
 
 group :development do
@@ -38,7 +40,6 @@ group :development do
   gem 'guard-rails_best_practices'
   gem 'guard-bundler'
   gem 'guard-rspec'
-  gem 'guard-zeus'
   gem 'guard-pow'
 end
 

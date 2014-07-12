@@ -31,5 +31,4 @@ describe Scrapper do
       subject.all
     end
   end
-
 end
