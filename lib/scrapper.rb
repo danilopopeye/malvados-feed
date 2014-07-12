@@ -6,33 +6,42 @@ class Scrapper
   end
 
   def latest
-    scrap @builder.latest
+    number = @builder.latest
+
+    if scrap(number)
+      latest = Strip.find_by(number: number)
+      Rails.cache.write('strip#latest', latest)
+    end
   end
 
   def all
     strip_number = @builder.latest
 
     while strip_number > 0 do
-      scrap strip_number
-      strip_number = @builder.previous strip_number
+      scrap(strip_number)
+      strip_number = @builder.previous(strip_number)
     end
   end
 
   private
 
-  def scrap number
+  def scrap(number)
     print "Started #{number}: "
+    saved = true
 
-    if @builder.exists? number
-      print "SKIPPED\n"
+    if @builder.exists?(number)
+      puts 'SKIPPED'
     else
       strip = @builder.build(number)
+      saved = strip.save
 
-      if strip.save
-        puts "DONE"
+      if saved
+        puts 'DONE'
       else
-        puts "FAIL"
+        puts 'FAIL'
       end
     end
+
+    saved
   end
 end
