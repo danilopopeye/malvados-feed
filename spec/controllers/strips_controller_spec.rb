@@ -13,6 +13,10 @@ describe StripsController do
       get :show, format: :atom
     end
 
+    it 'should set the cache headers to 1h' do
+      response.headers['Cache-Control'].should eq('max-age=3600, public')
+    end
+
     it "should show the atom feed" do
       response.should be_valid_atom
     end
@@ -25,6 +29,10 @@ describe StripsController do
   describe "GET '/strips/latest.atom'" do
     before do
       get :show, format: :atom, latest: true
+    end
+
+    it 'should set the cache headers to 1h' do
+      response.headers['Cache-Control'].should eq('max-age=3600, public')
     end
 
     it "should show the atom feed" do
