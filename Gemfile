@@ -5,7 +5,7 @@ ruby '2.1.1'
 gem 'rails'
 
 # mongoid files
-gem 'mongoid', github: 'mongoid/mongoid'
+gem 'mongoid'
 gem 'bson_ext'
 
 # application
@@ -24,14 +24,14 @@ group :production do
 end
 
 group :test, :development do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 2.14'
   gem 'factory_girl_rails'
   gem 'pry-remote'
   gem 'pry-plus'
 end
 
 group :development do
-  gem 'rails_best_practices', :require => false
+  gem 'rails_best_practices', require: false
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'meta_request'
