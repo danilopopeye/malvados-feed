@@ -6,7 +6,6 @@ gem 'rails'
 
 # mongoid files
 gem 'mongoid'
-gem 'bson_ext'
 
 # application
 gem 'builder'
