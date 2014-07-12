@@ -4,12 +4,13 @@ describe StripsController do
   render_views
 
   before do
-    3.times { create :strip }
+    4.times { create :strip }
+    create :strip, number: 666
   end
 
   describe "GET '/strips.atom'" do
     before do
-      get 'show', :format => :atom
+      get :show, format: :atom
     end
 
     it "should show the atom feed" do
@@ -17,13 +18,13 @@ describe StripsController do
     end
 
     it 'should render all strips' do
-      assigns(:strips).count.should eq 3
+      assigns(:strips).count.should eq(5)
     end
   end
 
   describe "GET '/strips/latest.atom'" do
     before do
-      get 'show', :format => :atom, :latest => true
+      get :show, format: :atom, latest: true
     end
 
     it "should show the atom feed" do
@@ -32,7 +33,7 @@ describe StripsController do
 
     it 'should render only the latest strip' do
       assigns(:strips).count.should eq 1
-      assigns(:strips).should == [ Strip.latest ]
+      assigns(:strips).map(&:number).should eq([666])
     end
   end
 
