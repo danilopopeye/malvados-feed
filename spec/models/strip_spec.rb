@@ -23,8 +23,9 @@ describe Strip do
       create :strip, number: 666
     end
 
-    it 'should return the Strip with the highest number' do
-      Strip.latest[:number].should eq 666
+    it 'should return and cache the Strip with the highest number' do
+      Rails.cache.should_receive(:fetch).with('strip#latest').and_yield
+      Strip.latest[:number].should eq(666)
     end
   end
 end
