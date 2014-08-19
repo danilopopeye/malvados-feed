@@ -9,8 +9,7 @@ class Scrapper
     number = @builder.latest
 
     if scrap(number)
-      latest = Strip.find_by(number: number)
-      Rails.cache.write('strip#latest', latest)
+      Rails.cache.write('strip#latest', number)
     end
   end
 

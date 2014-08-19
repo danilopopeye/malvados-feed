@@ -13,10 +13,12 @@ class Strip
   validates_uniqueness_of :number, :previous
 
   def self.latest
-    Rails.cache.fetch('strip#latest') do
+    number = Rails.cache.fetch('strip#latest') do
       Rails.logger.info 'Strip#latest - cache miss'
-      find_by(number: max(:number))
+      max(:number)
     end
+
+    find_by(number: number)
   end
 
   def title

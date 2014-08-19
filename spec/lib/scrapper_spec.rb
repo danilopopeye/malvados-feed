@@ -19,9 +19,8 @@ describe Scrapper do
         let(:scrap_result) { true }
         let(:strip) { build(:strip) }
 
-        it 'cache the strip' do
-          Strip.stub(find_by: strip)
-          Rails.cache.should_receive(:write).with('strip#latest', strip)
+        it 'cache the strip number' do
+          Rails.cache.should_receive(:write).with('strip#latest', 666)
         end
       end
 
