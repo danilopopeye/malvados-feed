@@ -9,6 +9,7 @@ gem 'mongoid'
 
 # application
 gem 'builder'
+gem 'lograge'
 gem 'uglifier'
 gem 'sass-rails'
 

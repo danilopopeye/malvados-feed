@@ -26,6 +26,17 @@ module MalvadosFeed
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # configure lograge
+    config.lograge.enabled = true
+    config.lograge.custom_options = -> (event) do
+      params = event.payload[:params]
+        .except('controller', 'action', 'format')
+
+      params.tap do |p|
+        p[:uuid] = event.payload[:uuid]
+      end
+    end
+
     # rspec config and generators
     config.generators do |g|
       g.fixture_replacement :factory_girl,
