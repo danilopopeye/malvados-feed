@@ -29,6 +29,9 @@ module MalvadosFeed
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Content Compression via Rack::Deflater
+    config.middleware.use Rack::Deflater
+
     # configure lograge
     config.lograge.enabled = true
     config.lograge.custom_options = -> (event) do
