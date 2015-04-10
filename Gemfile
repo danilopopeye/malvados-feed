@@ -12,6 +12,7 @@ gem 'builder'
 gem 'lograge'
 gem 'uglifier'
 gem 'sass-rails'
+gem 'puma'
 
 # newrelic
 gem 'newrelic_moped'
@@ -53,6 +54,6 @@ end
 group :other do
   gem 'codeclimate-test-reporter', require: false
   gem 'coveralls', require: false
-  gem 'passenger', require: false
   gem 'nokogiri', require: false
+  gem 'foreman', require: false
 end
