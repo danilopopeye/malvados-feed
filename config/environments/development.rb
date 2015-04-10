@@ -7,7 +7,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   # Use a different cache store in test.
-  config.cache_store = :dalli_store, { compress: true, expires_in: 10.seconds }
+  config.cache_store = :dalli_store, "127.0.0.1:#{ENV['BOXEN_MEMCACHED_PORT'] || 11211}", { compress: true, expires_in: 10.seconds }
 
   # Do not eager load code on boot.
   config.eager_load = false
