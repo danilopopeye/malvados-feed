@@ -9,6 +9,9 @@ require 'sprockets/railtie'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# Enabling garbage collection instrumentation
+GC::Profiler.enable
+
 module MalvadosFeed
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
