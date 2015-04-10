@@ -3,8 +3,6 @@ cache: bundler
 bundler_args: --without development
 services: mongodb
 cache: bundler
-rvm:
-  - 2.1.1
 addons:
   code_climate:
     repo_token: 083eb57ee15d2daa3a48dd9a620ae959b0773f7273c51b63b46fc41f615927b6
